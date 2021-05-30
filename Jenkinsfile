@@ -26,7 +26,7 @@ pipeline {
             steps {
                 echo 'Deploying the docker image'
                 sh 'docker images'
-                sh 'docker container run ghcr.io/16it043/hello-world:${BUILD_NUMBER}'
+                sh 'docker container run -d -p 80:80 ghcr.io/16it043/hello-world:${BUILD_NUMBER}'
             }
         }
     }
