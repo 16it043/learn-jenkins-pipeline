@@ -4,11 +4,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh 'go'
                 echo 'Building...1'
             }
         }
         stage('Test') {
             steps {
+                sh 'go env'
                 echo 'Testing...1'
             }
         }
